@@ -69,6 +69,23 @@ img {
   height: auto;
   display: block;
 }
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #3498db; /* Color de fondo azul */
+    color: #ffffff; /* Color del texto blanco */
+    border: 1px solid #3498db; /* Borde azul */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Cambiar el color del texto al pasar el ratón sobre el botón */
+.boton:hover {
+    color: #2c3e50; /* Cambiar el color del texto al pasar el ratón */
+    background-color: #ffffff; /* Cambiar el color de fondo al pasar el ratón */
+}
 
 /*===== CLASS CSS ===== */
 .section-title {
@@ -78,6 +95,16 @@ img {
   margin-top: var(--mb-2);
   margin-bottom: var(--mb-4);
   text-align: center;
+}
+.blue-bold {
+    color: blue;
+    font-weight: bold;
+}
+.project-icon {
+    width: 100px; /* Establece el ancho deseado */
+    height: 100px; /* Establece la altura deseada */
+    margin-right: 20px; /* Añade espacio entre la imagen y el texto */
+    /* Otros estilos personalizados */
 }
 .section-title::after {
   position: absolute;
@@ -245,6 +272,10 @@ img {
 .about__img {
   justify-self: center;
 }
+.about__text {
+    margin: 0 auto; /* Esto centrará el contenedor y mantendrá los márgenes izquierdo y derecho iguales */
+    max-width: auto; /* Ajusta el ancho máximo según tus preferencias */
+  }
 .about__img img {
   width: 200px;
   border-radius: 0.5rem;
@@ -255,11 +286,25 @@ img {
   row-gap: 2rem;
   text-align: center;
 }
+.skills__container_tr {
+    row-gap: 2rem;
+    text-align: center;
+    display: flex;
+  }
 .skills__subtitle {
   margin-bottom: var(--mb-2);
 }
 .skills__text {
   margin-bottom: var(--mb-4);
+}
+.narrow-container {
+    max-width: 400px; /* Puedes ajustar el valor según tus necesidades */
+    margin: 2rem auto; /* Centra el contenedor y aplica márgenes superior e inferior */
+}
+.flex-container {
+    display: flex;
+    justify-content: space-between; /* Espacio igual entre los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si no hay espacio suficiente */
 }
 .skills__data {
   display: flex;
@@ -268,10 +313,22 @@ img {
   position: relative;
   font-weight: var(--font-semi);
   padding: 0.5rem 1rem;
-  margin-bottom: var(--mb-4);
+  margin-bottom: var(--mb-7);
   border-radius: 0.5rem;
   box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
 }
+.skills__data-tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-weight: var(--font-semi);
+    padding: 0.5rem 1rem;
+    margin-bottom: var(--mb-7);
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+    width: 50%;
+  }
 .skills__icon {
   font-size: 2rem;
   margin-right: var(--mb-2);
@@ -305,7 +362,46 @@ img {
 .skills__img {
   border-radius: 0.5rem;
 }
+.work__img {
+    width: 100px; /* Tamaño específico que desees */
+    height: auto; /* Ajustar altura automáticamente */
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: absolute;
+    top: 0; /* Colocar en la parte superior */
+}
+.container-tr {
+    display: flex;
+    gap: 10px; /* Añade espacio entre los elementos */
+    border-radius: 8px; /* Bordes suavizados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
 
+.item-tr {
+    padding: 10px; /* Añade espacio interno para mejorar la apariencia */
+    background-color: #ffffff; /* Color de fondo opcional */
+}
+
+  .item {
+    height: 100px;
+    border: 1px solid #333;
+    flex: 1;
+    flex-direction: row;
+    /* flex-direction: row is the initial value */
+  }
+.ine__img {
+    width: 100px; /* Tamaño específico que desees */
+    height: auto; /* Ajustar altura automáticamente */
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: absolute;
+    top: 0; /* Colocar en la parte superior */
+}
+.blue-star {
+    font-size: 2rem;
+    margin-right: var(--mb-2);
+    color: var(--first-color);
+}
 /* ===== WORK =====*/
 .work__container {
   row-gap: 2rem;
@@ -394,7 +490,6 @@ img {
     bottom: 25%;
   }
   .about__container {
-    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     text-align: initial;
   }
@@ -407,6 +502,9 @@ img {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
     padding-top: 2rem;
+  }
+  .work section tr {
+    display: flex;
   }
   .contact__form {
     width: 360px;
@@ -428,7 +526,7 @@ img {
     margin-bottom: var(--mb-6);
   }
   .section-title::after {
-    width: 80px;
+    width: 400px;
     top: 3rem;
   }
   .nav {
